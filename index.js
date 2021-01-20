@@ -253,7 +253,7 @@ function feet(cm){
     return cm / 30.48;
   }
   console.log(feet())
- 
+
 
   
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -266,7 +266,7 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(i){
+/*function annoyingSong(i){
   while (count > 0) {
     var bottle = count == 1 ? "bottle" : "bottles";
     console.log(count + " " + word + " of beer on the wall");
@@ -277,8 +277,7 @@ function annoyingSong(i){
     console.log(count + " " + word + " of beer on the wall.");
   }
 }
-console.log(annoyingSong(5))
-
+console.log(annoyingSong(5))*/
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
