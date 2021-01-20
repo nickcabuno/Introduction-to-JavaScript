@@ -121,41 +121,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, lbs){
-    if (age >= 1){
-    console.log("Adult")
-    } else {
-      console.log("Puppy")
+function hungryDog(weight, age){
+    if (age >= 1 && weight <=5){
+      return weight*0.05;
+    } else if (age >= 1 && weight >= 6, weight <= 10){
+      return weight*0.04
+    } else if (age >= 1 && weight >= 11, weight <= 15){
+      return weight*0.03
+    } else if (age >= 1 && weight > 15){
+      return weight*0.02
+    } else if (age >= 2/12, age < 4/12){
+      return weight*0.1
+    } else if (age >= 4/12, age < 7/12){
+      return weight*0.05
+    } else if (age >= 7/12, age < 12/12){
+      return weight*0.04
     }
-
-    if (age >= "2 months", age <= "4 months"){
-      console.log("10% of body weight")
-    }
-    
-    if (age > "4 months", age <= "7 months"){
-      console.log("5% of body weight")
-    }
-
-    if (lbs <= 5){
-      console.log(lbs*0.05)
-    }
-
-    if (lbs >= 6, lbs <= 10){
-      console.log(lbs*0.04)
-    }
-
-    if (lbs >= 11, lbs <= 15){
-      console.log(lbs*0.03)
-    }
-
-    if (lbs >= 15){
-      console.log(lbs*0.02)
-    }
-
   }
 
-  let DogFood = hungryDog(1,3)
-  console.log(DogFood)
+  console.log(hungryDog(15,1))
+ 
+   
 
 
 
@@ -180,10 +166,63 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+
+var userChoice = Math.random();
+if (userChoice < 0.34){
+  userChoice = "rock";
 }
+else if (userChoice <= 0.67){
+  userChoice = "paper";
+}
+else {
+  userChoice = "scissors";
+}
+console.log(userChoice);
+
+var computerChoice = Math.random();
+if (computerChoice < 0.34){
+  computerChoice = "rock";
+}
+else if (computerChoice <= 0.67){
+  computerChoice = "paper";
+}
+else {
+  computerChoice = "scissors";
+}
+console.log(computerChoice);
+
+function game(userChoice, computerChoice){
+  if (userChoice === "scissors" && computerChoice === "scissors"){
+    return "it's a tie"	
+  }
+  if (userChoice === "paper" && computerChoice === "paper"){
+    return "it's a tie"	
+  }
+  if (userChoice === "rock" && computerChoice === "rock"){
+    return "it's a tie"	
+  }
+  if (userChoice === "scissors" && computerChoice === "rock"){
+    return "you lose!"	
+  }
+  if (userChoice === "paper" && computerChoice === "scissors"){
+    return "you lose!"	
+  }
+  if (userChoice === "rock" && computerChoice === "paper"){
+    return "you lose!"	
+  }
   
+  if (userChoice === "scissors" && computerChoice === "paper"){
+    return "you win!"	
+  }
+  if (userChoice === "paper" && computerChoice === "rock"){
+    return "you win!"	
+  }
+  if (userChoice === "rock" && computerChoice === "scissors"){
+    return "you win!"	
+  }
+};
+
+console.log(game(userChoice, computerChoice))
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
