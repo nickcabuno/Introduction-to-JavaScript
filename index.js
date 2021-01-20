@@ -236,11 +236,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371;
   }
-
-
+  console.log(miles(10));
 
 //Task 5b - Feet to CM
 /*
@@ -250,12 +249,13 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
+  console.log(feet())
  
 
-
+  
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Let's Sing 99 Bottles of Soda on the Wall!
@@ -266,9 +266,18 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(i){
+  while (count > 0) {
+    var bottle = count == 1 ? "bottle" : "bottles";
+    console.log(count + " " + word + " of beer on the wall");
+    console.log(count + " " + word + " of beer,");
+    console.log("Take one down, pass it around,");
+    --count;
+    var bottle = count == 1 ? "bottle" : "bottles";
+    console.log(count + " " + word + " of beer on the wall.");
   }
+}
+console.log(annoyingSong(5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -286,9 +295,24 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(grd){
+  if (grd >= 90 || grd === 100){
+    return "you got an A";
   }
+  if (grd >= 80 || grd <= 89){
+    return "you got a B";
+  }
+  if (grd >= 70 || grd <= 79){
+    return "you got a C";
+  }
+  if (grd >= 60 || grd <= 69){
+    return "you got a D";
+  }
+  if (grd <= 59){
+    return "you got an F";
+  }
+}
+console.log(grade())
   
   
 
