@@ -252,10 +252,10 @@ Using the feet function below do the following:
 function feet(cm){
     return cm / 30.48;
   }
-  console.log(feet())
+  console.log(feet());
 
 
-  
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Let's Sing 99 Bottles of Soda on the Wall!
@@ -266,18 +266,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-/*function annoyingSong(i){
-  while (count > 0) {
-    var bottle = count == 1 ? "bottle" : "bottles";
-    console.log(count + " " + word + " of beer on the wall");
-    console.log(count + " " + word + " of beer,");
-    console.log("Take one down, pass it around,");
-    --count;
-    var bottle = count == 1 ? "bottle" : "bottles";
-    console.log(count + " " + word + " of beer on the wall.");
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
   }
 }
-console.log(annoyingSong(5))*/
+annoyingSong(5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -294,26 +288,24 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(grd){
-  if (grd >= 90 || grd === 100){
-    return "you got an A";
+function grade(a){
+  let result;
+  if(a => 90 && a <= 100){
+    result = "you got an A";
+  } if(a >= 80 && a <= 89){
+    result = "you got a B"
+  } if(a >= 70 && a <= 79){
+    result = "you got a C"
+  } if(a >= 60 && a <= 69){
+    result = "you got a D"
+  } if(a < 60){
+    result = "you got an F"
   }
-  if (grd >= 80 || grd <= 89){
-    return "you got a B";
-  }
-  if (grd >= 70 || grd <= 79){
-    return "you got a C";
-  }
-  if (grd >= 60 || grd <= 69){
-    return "you got a D";
-  }
-  if (grd <= 59){
-    return "you got an F";
-  }
+  return result;
 }
 console.log(grade())
-  
-  
+
+
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -324,11 +316,10 @@ Using the vowelCounter function below do the following:
   2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
 
   HINT - you may need to study tomorrow's content on arrays 
-  HINT - try looking up the .includes() method
-*/
+  HINT - try looking up the .includes() method*/
 
 
-function vowelCounter(/*add your code here*/) {
+function vowelCounter()/*add your code here*/ {
     /*add your code here*/
 }
 
